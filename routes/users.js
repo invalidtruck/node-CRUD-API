@@ -8,7 +8,7 @@ router.get('/', function (req, res) {
 });
 
 router.get('/:id', function (req, res) {
-  let user = lista.find(f => f.id = req.params.id);
+  let user = lista.find(f => f.id == req.params.id);
   if (user)
     res.json({ success: true, user });
   else
